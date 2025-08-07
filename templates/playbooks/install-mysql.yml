@@ -1,0 +1,24 @@
+- name: Instalar MySQL Server
+  debconf:
+    name: "mysql-server"
+    question: "mysql-server/root_password"
+    value: "{{ mysql_root_password }}"
+    vtype: "password"
+
+- name: Confirmar root_password_again
+  debconf:
+    name: "mysql-server"
+    question: "mysql-server/root_password_again"
+    value: "{{ mysql_root_password }}"
+    vtype: "password"
+
+- name: Instalar paquete MySQL
+  apt:
+    name: mysql-server
+    state: present
+
+- name: Iniciar servicio MySQL
+  service:
+    name: mysql
+    state: started
+    enabled: yes

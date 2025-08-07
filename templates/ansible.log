@@ -1,0 +1,194 @@
+2025-08-06 23:57:42,176 p=8607 u=root n=ansible INFO| PLAY [Instalación de JDK, Tomcat y MySQL] **********************************************************************************************************************************************
+2025-08-06 23:57:42,336 p=8607 u=root n=ansible INFO| TASK [Gathering Facts] *****************************************************************************************************************************************************************
+2025-08-06 23:57:48,172 p=8607 u=root n=ansible WARNING| [WARNING]: Platform linux on host web1 is using the discovered Python interpreter at /usr/bin/python3.12, but future installation of another Python interpreter could change the
+meaning of that path. See https://docs.ansible.com/ansible-core/2.18/reference_appendices/interpreter_discovery.html for more information.
+
+2025-08-06 23:57:48,173 p=8607 u=root n=ansible INFO| ok: [web1]
+2025-08-06 23:57:48,195 p=8607 u=root n=ansible INFO| TASK [Instalar JDK] ********************************************************************************************************************************************************************
+2025-08-06 23:57:48,316 p=8607 u=root n=ansible INFO| fatal: [web1]: FAILED! => {"msg": "The task includes an option with an undefined variable.. 'jdk_package' is undefined\n\nThe error appears to be in '/opt/tomcat-lab/playbooks/install-jdk.yml': line 1, column 3, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n- name: Instalar JDK\n  ^ here\n"}
+2025-08-06 23:57:48,324 p=8607 u=root n=ansible INFO| PLAY RECAP *****************************************************************************************************************************************************************************
+2025-08-06 23:57:48,325 p=8607 u=root n=ansible INFO| web1                       : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-08-07 00:01:50,271 p=9037 u=root n=ansible INFO| PLAY [Instalación de JDK, Tomcat y MySQL] **********************************************************************************************************************************************
+2025-08-07 00:01:50,355 p=9037 u=root n=ansible INFO| TASK [Gathering Facts] *****************************************************************************************************************************************************************
+2025-08-07 00:01:54,489 p=9037 u=root n=ansible WARNING| [WARNING]: Platform linux on host web1 is using the discovered Python interpreter at /usr/bin/python3.12, but future installation of another Python interpreter could change the
+meaning of that path. See https://docs.ansible.com/ansible-core/2.18/reference_appendices/interpreter_discovery.html for more information.
+
+2025-08-07 00:01:54,491 p=9037 u=root n=ansible INFO| ok: [web1]
+2025-08-07 00:01:54,533 p=9037 u=root n=ansible INFO| TASK [Instalar JDK] ********************************************************************************************************************************************************************
+2025-08-07 00:01:58,876 p=9037 u=root n=ansible INFO| ok: [web1]
+2025-08-07 00:01:58,905 p=9037 u=root n=ansible INFO| TASK [Crear usuario tomcat] ************************************************************************************************************************************************************
+2025-08-07 00:02:00,401 p=9037 u=root n=ansible INFO| ok: [web1]
+2025-08-07 00:02:00,423 p=9037 u=root n=ansible INFO| TASK [Crear directorio de instalación] *************************************************************************************************************************************************
+2025-08-07 00:02:01,444 p=9037 u=root n=ansible INFO| ok: [web1]
+2025-08-07 00:02:01,501 p=9037 u=root n=ansible INFO| TASK [Descargar Tomcat] ****************************************************************************************************************************************************************
+2025-08-07 00:02:03,714 p=9037 u=root n=ansible INFO| fatal: [web1]: FAILED! => {"changed": false, "dest": "/tmp/tomcat.tar.gz", "elapsed": 1, "msg": "Request failed", "response": "HTTP Error 404: Not Found", "status_code": 404, "url": "https://downloads.apache.org/tomcat/tomcat-10/v10.1.24/bin/apache-tomcat-10.1.24.tar.gz"}
+2025-08-07 00:02:03,717 p=9037 u=root n=ansible INFO| PLAY RECAP *****************************************************************************************************************************************************************************
+2025-08-07 00:02:03,718 p=9037 u=root n=ansible INFO| web1                       : ok=4    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-08-07 00:17:14,191 p=9549 u=root n=ansible INFO| PLAY [Instalación de JDK, Tomcat y MySQL] **********************************************************************************************************************************************
+2025-08-07 00:17:14,244 p=9549 u=root n=ansible INFO| TASK [Gathering Facts] *****************************************************************************************************************************************************************
+2025-08-07 00:17:19,503 p=9549 u=root n=ansible WARNING| [WARNING]: Platform linux on host web1 is using the discovered Python interpreter at /usr/bin/python3.12, but future installation of another Python interpreter could change the
+meaning of that path. See https://docs.ansible.com/ansible-core/2.18/reference_appendices/interpreter_discovery.html for more information.
+
+2025-08-07 00:17:19,504 p=9549 u=root n=ansible INFO| ok: [web1]
+2025-08-07 00:17:19,520 p=9549 u=root n=ansible INFO| TASK [Instalar JDK] ********************************************************************************************************************************************************************
+2025-08-07 00:17:22,045 p=9549 u=root n=ansible INFO| ok: [web1]
+2025-08-07 00:17:22,086 p=9549 u=root n=ansible INFO| TASK [Crear usuario tomcat] ************************************************************************************************************************************************************
+2025-08-07 00:17:23,638 p=9549 u=root n=ansible INFO| ok: [web1]
+2025-08-07 00:17:23,655 p=9549 u=root n=ansible INFO| TASK [Crear directorio de instalación] *************************************************************************************************************************************************
+2025-08-07 00:17:24,765 p=9549 u=root n=ansible INFO| ok: [web1]
+2025-08-07 00:17:24,787 p=9549 u=root n=ansible INFO| TASK [Descargar Tomcat] ****************************************************************************************************************************************************************
+2025-08-07 00:17:26,572 p=9549 u=root n=ansible INFO| fatal: [web1]: FAILED! => {"changed": false, "dest": "/tmp/tomcat.tar.gz", "elapsed": 0, "msg": "Request failed", "response": "HTTP Error 404: Not Found", "status_code": 404, "url": "https://downloads.apache.org/tomcat/tomcat-10/v10.1.24/bin/apache-tomcat-10.1.24.tar.gz"}
+2025-08-07 00:17:26,575 p=9549 u=root n=ansible INFO| PLAY RECAP *****************************************************************************************************************************************************************************
+2025-08-07 00:17:26,576 p=9549 u=root n=ansible INFO| web1                       : ok=4    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-08-07 00:19:03,172 p=9792 u=root n=ansible INFO| PLAY [Instalación de JDK, Tomcat y MySQL] **********************************************************************************************************************************************
+2025-08-07 00:19:03,275 p=9792 u=root n=ansible INFO| TASK [Gathering Facts] *****************************************************************************************************************************************************************
+2025-08-07 00:19:07,167 p=9792 u=root n=ansible WARNING| [WARNING]: Platform linux on host web1 is using the discovered Python interpreter at /usr/bin/python3.12, but future installation of another Python interpreter could change the
+meaning of that path. See https://docs.ansible.com/ansible-core/2.18/reference_appendices/interpreter_discovery.html for more information.
+
+2025-08-07 00:19:07,168 p=9792 u=root n=ansible INFO| ok: [web1]
+2025-08-07 00:19:07,188 p=9792 u=root n=ansible INFO| TASK [Instalar JDK] ********************************************************************************************************************************************************************
+2025-08-07 00:19:09,171 p=9792 u=root n=ansible INFO| ok: [web1]
+2025-08-07 00:19:09,195 p=9792 u=root n=ansible INFO| TASK [Crear usuario tomcat] ************************************************************************************************************************************************************
+2025-08-07 00:19:10,190 p=9792 u=root n=ansible INFO| ok: [web1]
+2025-08-07 00:19:10,220 p=9792 u=root n=ansible INFO| TASK [Crear directorio de instalación] *************************************************************************************************************************************************
+2025-08-07 00:19:11,135 p=9792 u=root n=ansible INFO| ok: [web1]
+2025-08-07 00:19:11,160 p=9792 u=root n=ansible INFO| TASK [Descargar Tomcat] ****************************************************************************************************************************************************************
+2025-08-07 00:19:13,094 p=9792 u=root n=ansible INFO| changed: [web1]
+2025-08-07 00:19:13,130 p=9792 u=root n=ansible INFO| TASK [Extraer Tomcat] ******************************************************************************************************************************************************************
+2025-08-07 00:19:15,111 p=9792 u=root n=ansible INFO| fatal: [web1]: FAILED! => {"changed": false, "msg": "Source '/tmp/tomcat.tar.gz' does not exist"}
+2025-08-07 00:19:15,116 p=9792 u=root n=ansible INFO| PLAY RECAP *****************************************************************************************************************************************************************************
+2025-08-07 00:19:15,117 p=9792 u=root n=ansible INFO| web1                       : ok=5    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-08-07 00:20:51,886 p=10047 u=root n=ansible INFO| PLAY [Instalación de JDK, Tomcat y MySQL] **********************************************************************************************************************************************
+2025-08-07 00:20:51,976 p=10047 u=root n=ansible INFO| TASK [Gathering Facts] *****************************************************************************************************************************************************************
+2025-08-07 00:20:56,381 p=10047 u=root n=ansible WARNING| [WARNING]: Platform linux on host web1 is using the discovered Python interpreter at /usr/bin/python3.12, but future installation of another Python interpreter could change the
+meaning of that path. See https://docs.ansible.com/ansible-core/2.18/reference_appendices/interpreter_discovery.html for more information.
+
+2025-08-07 00:20:56,381 p=10047 u=root n=ansible INFO| ok: [web1]
+2025-08-07 00:20:56,414 p=10047 u=root n=ansible INFO| TASK [Instalar JDK] ********************************************************************************************************************************************************************
+2025-08-07 00:20:58,428 p=10047 u=root n=ansible INFO| ok: [web1]
+2025-08-07 00:20:58,455 p=10047 u=root n=ansible INFO| TASK [Crear usuario tomcat] ************************************************************************************************************************************************************
+2025-08-07 00:20:59,848 p=10047 u=root n=ansible INFO| ok: [web1]
+2025-08-07 00:20:59,885 p=10047 u=root n=ansible INFO| TASK [Crear directorio de instalación] *************************************************************************************************************************************************
+2025-08-07 00:21:01,042 p=10047 u=root n=ansible INFO| ok: [web1]
+2025-08-07 00:21:01,080 p=10047 u=root n=ansible INFO| TASK [Descargar Tomcat] ****************************************************************************************************************************************************************
+2025-08-07 00:21:03,537 p=10047 u=root n=ansible INFO| changed: [web1]
+2025-08-07 00:21:03,569 p=10047 u=root n=ansible INFO| TASK [Extraer Tomcat] ******************************************************************************************************************************************************************
+2025-08-07 00:21:05,636 p=10047 u=root n=ansible INFO| fatal: [web1]: FAILED! => {"changed": false, "msg": "Source '/tmp/tomcat.tar.gz' does not exist"}
+2025-08-07 00:21:05,639 p=10047 u=root n=ansible INFO| PLAY RECAP *****************************************************************************************************************************************************************************
+2025-08-07 00:21:05,640 p=10047 u=root n=ansible INFO| web1                       : ok=5    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-08-07 00:22:25,055 p=10278 u=root n=ansible INFO| PLAY [Instalación de JDK, Tomcat y MySQL] **********************************************************************************************************************************************
+2025-08-07 00:22:25,110 p=10278 u=root n=ansible INFO| TASK [Gathering Facts] *****************************************************************************************************************************************************************
+2025-08-07 00:22:28,752 p=10278 u=root n=ansible WARNING| [WARNING]: Platform linux on host web1 is using the discovered Python interpreter at /usr/bin/python3.12, but future installation of another Python interpreter could change the
+meaning of that path. See https://docs.ansible.com/ansible-core/2.18/reference_appendices/interpreter_discovery.html for more information.
+
+2025-08-07 00:22:28,753 p=10278 u=root n=ansible INFO| ok: [web1]
+2025-08-07 00:22:28,785 p=10278 u=root n=ansible INFO| TASK [Instalar JDK] ********************************************************************************************************************************************************************
+2025-08-07 00:22:31,333 p=10278 u=root n=ansible INFO| ok: [web1]
+2025-08-07 00:22:31,359 p=10278 u=root n=ansible INFO| TASK [Crear usuario tomcat] ************************************************************************************************************************************************************
+2025-08-07 00:22:32,510 p=10278 u=root n=ansible INFO| ok: [web1]
+2025-08-07 00:22:32,549 p=10278 u=root n=ansible INFO| TASK [Crear directorio de instalación] *************************************************************************************************************************************************
+2025-08-07 00:22:33,473 p=10278 u=root n=ansible INFO| ok: [web1]
+2025-08-07 00:22:33,496 p=10278 u=root n=ansible INFO| TASK [Descargar Tomcat] ****************************************************************************************************************************************************************
+2025-08-07 00:22:40,676 p=10278 u=root n=ansible INFO| changed: [web1]
+2025-08-07 00:22:40,732 p=10278 u=root n=ansible INFO| TASK [Extraer Tomcat] ******************************************************************************************************************************************************************
+2025-08-07 00:22:45,944 p=10278 u=root n=ansible INFO| changed: [web1]
+2025-08-07 00:22:45,969 p=10278 u=root n=ansible INFO| TASK [Permisos de ejecución] ***********************************************************************************************************************************************************
+2025-08-07 00:22:46,603 p=10278 u=root n=ansible INFO| [0;31m--- before[0m
+[0;31m[0m[0;32m+++ after[0m
+[0;32m[0m[0;36m@@ -1,4 +1,4 @@[0m
+[0;36m[0m {
+[0;31m-    "mode": "0750",[0m
+[0;31m[0m[0;32m+    "mode": "0755",[0m
+[0;32m[0m     "path": "/opt/tomcat/bin"
+ }
+
+
+2025-08-07 00:22:46,605 p=10278 u=root n=ansible INFO| changed: [web1]
+2025-08-07 00:22:46,651 p=10278 u=root n=ansible INFO| TASK [Crear systemd service] ***********************************************************************************************************************************************************
+2025-08-07 00:22:49,664 p=10278 u=root n=ansible INFO| [0;31m--- before: /etc/systemd/system/tomcat.service[0m
+[0;31m[0m[0;32m+++ after: /root/.ansible/tmp/ansible-local-102789oov3lgx/tmpci8g_61a/tomcat.service.j2[0m
+[0;32m[0m[0;36m@@ -1,5 +1,5 @@[0m
+[0;36m[0m [Unit]
+[0;31m-Description=Apache Tomcat Web Application Container[0m
+[0;31m[0m[0;32m+Description=Apache Tomcat[0m
+[0;32m[0m After=network.target
+ 
+ [Service]
+[0;36m@@ -7,7 +7,6 @@[0m
+[0;36m[0m User=tomcat
+ Group=tomcat
+ Environment=JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+[0;31m-Environment=CATALINA_PID=/opt/tomcat/temp/tomcat.pid[0m
+[0;31m[0m Environment=CATALINA_HOME=/opt/tomcat
+ Environment=CATALINA_BASE=/opt/tomcat
+ ExecStart=/opt/tomcat/bin/startup.sh
+
+
+2025-08-07 00:22:49,667 p=10278 u=root n=ansible INFO| changed: [web1]
+2025-08-07 00:22:49,694 p=10278 u=root n=ansible INFO| TASK [Iniciar servicio tomcat] *********************************************************************************************************************************************************
+2025-08-07 00:22:51,440 p=10278 u=root n=ansible INFO| fatal: [web1]: FAILED! => {"changed": false, "msg": "Unable to start service tomcat: Warning: The unit file, source configuration file or drop-ins of tomcat.service changed on disk. Run 'systemctl daemon-reload' to reload units.\nJob for tomcat.service failed because the control process exited with error code.\nSee \"systemctl status tomcat.service\" and \"journalctl -xeu tomcat.service\" for details.\n"}
+2025-08-07 00:22:51,445 p=10278 u=root n=ansible INFO| PLAY RECAP *****************************************************************************************************************************************************************************
+2025-08-07 00:22:51,446 p=10278 u=root n=ansible INFO| web1                       : ok=8    changed=4    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-08-07 00:29:00,451 p=10647 u=root n=ansible INFO| PLAY [Instalación de JDK, Tomcat y MySQL] **********************************************************************************************************************************************
+2025-08-07 00:29:00,501 p=10647 u=root n=ansible INFO| TASK [Gathering Facts] *****************************************************************************************************************************************************************
+2025-08-07 00:29:04,301 p=10647 u=root n=ansible WARNING| [WARNING]: Platform linux on host web1 is using the discovered Python interpreter at /usr/bin/python3.12, but future installation of another Python interpreter could change the
+meaning of that path. See https://docs.ansible.com/ansible-core/2.18/reference_appendices/interpreter_discovery.html for more information.
+
+2025-08-07 00:29:04,302 p=10647 u=root n=ansible INFO| ok: [web1]
+2025-08-07 00:29:04,324 p=10647 u=root n=ansible INFO| TASK [Instalar JDK] ********************************************************************************************************************************************************************
+2025-08-07 00:29:07,115 p=10647 u=root n=ansible INFO| ok: [web1]
+2025-08-07 00:29:07,157 p=10647 u=root n=ansible INFO| TASK [Crear usuario tomcat] ************************************************************************************************************************************************************
+2025-08-07 00:29:08,261 p=10647 u=root n=ansible INFO| ok: [web1]
+2025-08-07 00:29:08,296 p=10647 u=root n=ansible INFO| TASK [Crear directorio de instalación] *************************************************************************************************************************************************
+2025-08-07 00:29:09,526 p=10647 u=root n=ansible INFO| ok: [web1]
+2025-08-07 00:29:09,552 p=10647 u=root n=ansible INFO| TASK [Descargar Tomcat] ****************************************************************************************************************************************************************
+2025-08-07 00:29:11,537 p=10647 u=root n=ansible INFO| ok: [web1]
+2025-08-07 00:29:11,571 p=10647 u=root n=ansible INFO| TASK [Extraer Tomcat] ******************************************************************************************************************************************************************
+2025-08-07 00:29:15,290 p=10647 u=root n=ansible INFO| changed: [web1]
+2025-08-07 00:29:15,320 p=10647 u=root n=ansible INFO| TASK [Permisos de ejecución] ***********************************************************************************************************************************************************
+2025-08-07 00:29:15,934 p=10647 u=root n=ansible INFO| [0;31m--- before[0m
+[0;31m[0m[0;32m+++ after[0m
+[0;32m[0m[0;36m@@ -1,4 +1,4 @@[0m
+[0;36m[0m {
+[0;31m-    "mode": "0750",[0m
+[0;31m[0m[0;32m+    "mode": "0755",[0m
+[0;32m[0m     "path": "/opt/tomcat/bin"
+ }
+
+
+2025-08-07 00:29:15,935 p=10647 u=root n=ansible INFO| changed: [web1]
+2025-08-07 00:29:15,976 p=10647 u=root n=ansible INFO| TASK [Crear systemd service] ***********************************************************************************************************************************************************
+2025-08-07 00:29:17,312 p=10647 u=root n=ansible INFO| ok: [web1]
+2025-08-07 00:29:17,354 p=10647 u=root n=ansible INFO| TASK [🔁 Recargar systemd] *************************************************************************************************************************************************************
+2025-08-07 00:29:20,035 p=10647 u=root n=ansible INFO| changed: [web1]
+2025-08-07 00:29:20,052 p=10647 u=root n=ansible INFO| TASK [Iniciar servicio tomcat] *********************************************************************************************************************************************************
+2025-08-07 00:29:21,919 p=10647 u=root n=ansible INFO| changed: [web1]
+2025-08-07 00:29:21,944 p=10647 u=root n=ansible INFO| TASK [Instalar MySQL Server] ***********************************************************************************************************************************************************
+2025-08-07 00:29:24,780 p=10647 u=root n=ansible INFO| [0;31m--- before[0m
+[0;31m[0m[0;32m+++ after[0m
+[0;32m[0m[0;36m@@ -1,3 +1,3 @@[0m
+[0;36m[0m {
+[0;31m-    "mysql-server/root_password": ""[0m
+[0;31m[0m[0;32m+    "mysql-server/root_password": "StrongPass123"[0m
+[0;32m[0m }
+
+
+2025-08-07 00:29:24,782 p=10647 u=root n=ansible INFO| changed: [web1]
+2025-08-07 00:29:24,807 p=10647 u=root n=ansible INFO| TASK [Confirmar root_password_again] ***************************************************************************************************************************************************
+2025-08-07 00:29:26,861 p=10647 u=root n=ansible INFO| [0;31m--- before[0m
+[0;31m[0m[0;32m+++ after[0m
+[0;32m[0m[0;36m@@ -1,4 +1,4 @@[0m
+[0;36m[0m {
+     "mysql-server/root_password": "(password omitted)",
+[0;31m-    "mysql-server/root_password_again": ""[0m
+[0;31m[0m[0;32m+    "mysql-server/root_password_again": "StrongPass123"[0m
+[0;32m[0m }
+
+
+2025-08-07 00:29:26,862 p=10647 u=root n=ansible INFO| changed: [web1]
+2025-08-07 00:29:26,916 p=10647 u=root n=ansible INFO| TASK [Instalar paquete MySQL] **********************************************************************************************************************************************************
+2025-08-07 00:29:30,334 p=10647 u=root n=ansible INFO| ok: [web1]
+2025-08-07 00:29:30,363 p=10647 u=root n=ansible INFO| TASK [Iniciar servicio MySQL] **********************************************************************************************************************************************************
+2025-08-07 00:29:31,453 p=10647 u=root n=ansible INFO| ok: [web1]
+2025-08-07 00:29:31,457 p=10647 u=root n=ansible INFO| PLAY RECAP *****************************************************************************************************************************************************************************
+2025-08-07 00:29:31,458 p=10647 u=root n=ansible INFO| web1                       : ok=14   changed=6    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   

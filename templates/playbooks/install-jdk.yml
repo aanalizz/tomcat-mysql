@@ -1,0 +1,5 @@
+- name: Instalar JDK
+  apt:
+    name: "{{ jdk_package }}"
+    state: present
+  when: ansible_os_family == "Debian"
